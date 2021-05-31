@@ -55,8 +55,7 @@ function atualizarComboCidades(idEstado) {
 }
 
 function carregarComboCidades() {
-  // console.log(cidadesJSON);
-  // comboCidades = []
+  comboCidades.innerHTML = '';
   for (let index = 0; index < cidadesJSON.length; index++) {
     const cidade = cidadesJSON[index];
     const id = cidade.id;
