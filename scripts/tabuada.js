@@ -30,7 +30,7 @@ function montarTabuadaHTML() {
   const tabuadas = gerarTabuadas(qntdTabuadas);
   const tituloHeader = document.createElement('h1');
 
-  tituloHeader.innerHTML = `Tabuada do 1 ao ${tabuadas.length}`;
+  tituloHeader.innerHTML = `Tabuadas <span>do 1 ao ${tabuadas.length}</span>`;
   header.appendChild(tituloHeader);
 
   for (let index = 0; index < tabuadas.length; index++) {
