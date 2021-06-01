@@ -39,12 +39,16 @@ function carregarComboEstados() {
 }
 
 comboEstados.addEventListener('change', () => {
+  nomeEstado = comboEstados[comboEstados.selectedIndex].textContent;
   idEstado = comboEstados.options[comboEstados.selectedIndex].value;
-  atualizarListaCidades(idEstado);
+  atualizarListaCidades(idEstado, nomeEstado);
 });
 
-function atualizarListaCidades(idEstado) {
+function atualizarListaCidades(idEstado, nomeEstado) {
   let URL_CIDADE = `${URL_BASE}${ESTADOS}/${idEstado}${CIDADES}${ORDER_BY}`;
+
+  const labelCidade = document.querySelector('#labelCidade');
+  labelCidade.innerHTML = `Cidades do estado: <span>${nomeEstado}</span>`;
 
   requestAPI(URL_CIDADE)
     .then(data => cidadesJSON = data);
@@ -74,5 +78,6 @@ function carregarListaCidades() {
 setTimeout(() => {
   carregarComboEstados();
   idEstado = comboEstados.options[comboEstados.selectedIndex].value;
-  atualizarListaCidades(idEstado);
+  nomeEstado = comboEstados[comboEstados.selectedIndex].textContent;
+  atualizarListaCidades(idEstado, nomeEstado);
 }, 1000);
