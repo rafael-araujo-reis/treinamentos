@@ -73,4 +73,6 @@ function carregarComboCidades() {
 
 setTimeout(() => {
   carregarComboEstados();
+  idEstado = comboEstados.options[comboEstados.selectedIndex].value;
+  atualizarComboCidades(idEstado);
 }, 1000);
