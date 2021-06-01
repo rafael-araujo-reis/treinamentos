@@ -1,0 +1,122 @@
+* {
+  margin         : 0;
+  padding        : 0;
+  text-decoration: none;
+  list-style     : none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(0, 11, 165);
+  --second-color : rgb(49, 118, 245);
+
+  --hover-color: rgb(0, 155, 116);
+  --even-color : rgb(177, 248, 230);
+  --odd-color  : rgba(177, 248, 230, 0.4);
+}
+
+body {
+  padding    : 1.7rem;
+  font-family: 'Poppins';
+
+  display       : flex;
+  flex-direction: column;
+}
+
+/***********
+HEADER
+************/
+
+header {
+  text-align: center;
+}
+
+header p {
+  margin-bottom: 1rem;
+}
+
+header p span {
+  font-weight: bold;
+}
+
+header p span:last-child {
+  color: var(--primary-color);
+}
+
+h1 {
+  color: var(--second-color);
+}
+
+/***********
+BUTTONS
+************/
+.btn {
+  padding         : 0.5rem 2rem;
+  border-radius   : 0.3rem;
+  background-color: var(--primary-color);
+}
+
+.btn-right {
+  color          : white;
+  align-items    : flex-start;
+  justify-content: flex-start;
+}
+
+/***********
+CORE
+************/
+main {
+  padding: 1rem 0;
+}
+
+#labelCidade {
+  padding: 1rem 0;
+}
+
+#labelCidade span {
+  font-weight: bold;
+  color      : var(--second-color);
+}
+
+li {
+  border-bottom: 1px solid rgb(116, 116, 116);
+  padding      : 0.5rem
+}
+
+li:nth-child(even) {
+  background-color: var(--even-color)
+}
+
+li:nth-child(odd) {
+  background-color: var(--odd-color);
+}
+
+li:hover {
+  background: var(--hover-color);
+  color     : white;
+  cursor    : pointer;
+}
+
+
+/***********
+COMBO
+************/
+select {
+  width        : 100%;
+  padding      : 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border       : 1px solid rgb(170, 170, 170);
+
+  font-family: 'Poppins';
+  font-size  : 1.1rem;
+
+  cursor: pointer;
+
+  /* Remove icon drop */
+  /* appearance: none; */
+}
