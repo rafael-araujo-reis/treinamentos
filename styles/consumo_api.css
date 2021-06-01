@@ -55,6 +55,11 @@ h1 {
 /***********
 BUTTONS
 ************/
+.button {
+  display        : flex;
+  justify-content: flex-end;
+}
+
 .btn {
   padding         : 0.5rem 2rem;
   border-radius   : 0.3rem;
@@ -119,4 +124,10 @@ select {
 
   /* Remove icon drop */
   /* appearance: none; */
+}
+
+@media screen and (max-width: 700px) {
+  .button {
+    justify-content: center;
+  }
 }
