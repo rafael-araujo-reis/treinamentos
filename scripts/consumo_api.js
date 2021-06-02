@@ -79,6 +79,7 @@ function carregarListaCidades() {
   }
 }
 
+load.classList.add('active');
 setTimeout(() => {
   carregarComboEstados();
   idEstado = comboEstados.options[comboEstados.selectedIndex].value;
