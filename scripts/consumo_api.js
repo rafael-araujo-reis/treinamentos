@@ -9,6 +9,7 @@ let respondeJSON = '';
 
 const comboEstados = document.querySelector('#comboEstados');
 const listaCidades = document.querySelector('#listaCidades');
+const load = document.querySelector('#load');
 
 const requestAPI = async (url) => {
   const response = await fetch(url, {
@@ -53,13 +54,16 @@ function atualizarListaCidades(idEstado, nomeEstado) {
   requestAPI(URL_CIDADE)
     .then(data => cidadesJSON = data);
 
+  listaCidades.innerHTML = '';
+
+  load.classList.add('active');
   setTimeout(() => {
     carregarListaCidades();
+    load.classList.remove('active');
   }, 2000);
 }
 
 function carregarListaCidades() {
-  listaCidades.innerHTML = '';
   for (let index = 0; index < cidadesJSON.length; index++) {
     const cidade = cidadesJSON[index];
     const id = cidade.id;
