@@ -1,0 +1,26 @@
+* {
+  margin     : 0;
+  padding    : 0;
+  font-family: 'Poppins';
+}
+
+.container {
+  padding: 2rem 1rem;
+  margin : 0 1rem;
+
+  display              : grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  gap: 1rem;
+}
+
+.card {
+  text-align: center;
+
+  color           : white;
+  font-size       : 1.2rem;
+  background-color: rgb(49, 118, 245);
+
+  border-radius: 0.5rem;
+  padding      : inherit;
+}
